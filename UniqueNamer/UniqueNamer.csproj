@@ -13,6 +13,7 @@
     <RepositoryUrl>https://github.com/curiosity-ai/unique-namer</RepositoryUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>UniqueNamer</PackageId>
     <Description>
       A simple and flexible random name generator for .NET, capable of creating names composed of an adjective and a noun from predefined categories. Supports customizable suffixes, separators, and output styles (lowercase, uppercase, title case). Ideal for generating usernames, project names, or other randomized identifiers.
@@ -22,5 +23,7 @@
     </PackageTags>
   </PropertyGroup>
 
-
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
