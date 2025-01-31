@@ -2,14 +2,20 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 public static class UniqueNamer
 {
+    private static Random _sharedRandom =
+#if NET7_0_OR_GREATER
+    Random.Shared;
+#else
+     new Random(0);
+#endif
+
     public static string Generate(Categories[] categories, int suffixLength = 0, string separator = "-", int? seed = null, Style style = Style.lowercase)
     {
-        var random = seed.HasValue ? new Random(seed.Value) : Random.Shared;
+        var random = seed.HasValue ? new Random(seed.Value) : _sharedRandom;
 
         var wordsList = Data.Words[categories[random.Next(categories.Length)]];
 
