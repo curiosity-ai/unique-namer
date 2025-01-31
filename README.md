@@ -2,8 +2,6 @@
 
 ![NuGet - Version](https://img.shields.io/nuget/v/UniqueNamer?label=version&color=blue)
 
-![cover](images/cover.png)
-
 UniqueNamer is a C# library for generating unique and memorable names (e.g., `talented-toucan`, `naughty-watermelon`). These names are ideal for naming temporary directories, user session IDs, gamer tags, project names, process names, or submitted jobs.
 
 The library is inspired by [aziele/unique-namer](https://github.com/aziele/unique-namer), originally developed by Andrzej Zielezinski. UniqueNamer expands on the concept, offering customizable name generation with a wide variety of thematic categories.
