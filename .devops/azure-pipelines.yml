@@ -23,7 +23,7 @@ steps:
       $dottedDate = (Get-Date).ToString("yy.M")
       $buildID = $($env:BUILD_BUILDID) 
       $modBuildID = [int]$buildID % 65536  # ensure fits in int16
-      $newTargetVersion = "$dottedDate.$buildID"
+      $newTargetVersion = "$dottedDate.$modBuildID"
       Write-Host "##vso[task.setvariable variable=targetVersion;]$newTargetVersion"
       Write-Host "Updated targetVersion to '$newTargetVersion'"
 
